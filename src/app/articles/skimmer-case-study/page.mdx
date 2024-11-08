@@ -1,0 +1,106 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import imgPaymentsLearnMore from './images/payments-learn-more.png'
+import imgDashboard from './images/dashboard.png'
+import imgInvoiceAdd from './images/invoice-add.png'
+import imgInvoiceDetail from './images/invoice-detail.png'
+import imgInvoiceEmail from './images/invoice-email.png'
+import imgInvoicing from './images/invoicing.png'
+import imgPaymentsFigma from './images/payments-figma.png'
+import imgPaymentsRefund from './images/payments-refund.png'
+import imgSkimmerFigmaProto from './images/skimmer-figma-proto.png'
+import imgSkimmerFigma from './images/skimmer-figma.png'
+
+export const article = {
+  author: 'Rob Schuler',
+  date: '2023-01-23',
+  title: 'Skimmer Invoicing and Payments Design Case Study',
+  description:
+    'Design and build an invoicing and payments feature for Skimmer, a web and mobile SaaS application for pool service businesses.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+Skimmer is a web and mobile application SaaS for pool
+service businesses. It enables pool business to support service
+techs in the field of pool cleaning and maintenance and allows them
+manage their business with customer invoicing and payments.
+
+<figure>
+  <Image
+    src={imgPaymentsLearnMore}
+    alt="Skimmer invoicing and payments onboarding screenshot"
+  />
+  <figcaption>Skimmer Invoicing and Payments Onboarding</figcaption>
+</figure>
+
+## Challenge
+
+The challenge was to design and build an invoicing and payments
+feature already in alpha. This required integrating new design
+patterns with existing good patterns while addressing a few poor
+design patterns. A lot of the product research had been completed
+and much of the work centered around making sure the feature set
+was complete and that the proper user experience was design. This
+also included addressing a revamp of the front-end using React.
+
+## Design + Prototyping
+
+The existing design was evaluated against the new product
+requirements. This encompassed customer settings of invoicing and
+payments and their defaults and options, invoice management
+including how invoices are made, sent and received, and payments
+management including entering, updating, deleting and customer
+self-payment. This also included customer visibility and
+communications of these invoices and payments.
+
+The entire UI feature set, along with all of the dialogs, toasts,
+interaction widgets and modals, were mocked up using figma. With
+that mockup a functional prototype was created using Figma
+documenting the interactions and user experience notes.
+
+<figure>
+  <Image src={imgSkimmerFigma} alt="Mockups done in Figma screenshot" />
+  <figcaption>Figma Mockups</figcaption>
+</figure>
+<figure>
+  <Image src={imgSkimmerFigmaProto} alt="Figma Prototype screenshot" />
+  <figcaption>Figma Prototype</figcaption>
+</figure>
+<figure>
+  <Image src={imgInvoicing} alt="Invoicing screenshot" />
+  <figcaption>Invoice Management</figcaption>
+</figure>
+<figure>
+  <Image src={imgInvoiceAdd} alt="Add invoice screenshot" />
+  <figcaption>Add Invoice</figcaption>
+</figure>
+<figure>
+  <Image src={imgInvoiceDetail} alt="Invoice detail screenshot" />
+  <figcaption>Invoice Detail</figcaption>
+</figure>
+<figure>
+  <Image src={imgInvoiceEmail} alt="Invoice email screenshot" />
+  <figcaption>Customer Invoice Email</figcaption>
+</figure>
+<figure>
+  <Image src={imgPaymentsRefund} alt="Payment refund screenshot" />
+  <figcaption>Payments Refund Modal</figcaption>
+</figure>
+<figure>
+  <Image src={imgDashboard} alt="Dashboard screenshot" />
+  <figcaption>Dashboard Updates</figcaption>
+</figure>
+
+## Reflection
+
+The final design of Skimmer's invoicing and payments now met the
+majority of users needs and expectations while improving the
+experience and usability of the app. The design and front-end
+standardization improvements also served as a focus points for
+Skimmer to build a distributed yet cohesive team that was balanced
+with world class product, design and engineering practitioners.

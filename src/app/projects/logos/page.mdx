@@ -1,0 +1,37 @@
+import { ProjectLayout } from '@/components/ProjectLayout'
+import imgAchaean from './images/achaean-sports-logo.jpg'
+import imgBehuddle from './images/behuddle-logo.jpg'
+import imgCloudVolumes from './images/cloudvolumes-logo.jpg'
+import imgColorTokens from './images/colortokens-logo.jpg'
+import imgExofense from './images/exofense-logo.jpg'
+import imgIOSpree from './images/iospree-logo.jpg'
+import imgSVL from './images/silicon-valley-landscape-logo.jpg'
+import imgSilverlief from './images/silverlief-logo.jpg'
+import logo from '@/images/logos/robomatic-logo.svg'
+
+export const project = {
+  date: '2014-01-01',
+  title: 'Logo Design',
+  company: 'Various Companies',
+  description: 'Logos I have designed for various clients and projects.',
+  logo,
+  image: imgBehuddle,
+}
+
+export const metadata = {
+  title: project.title,
+  description: project.description,
+}
+
+export default (props) => <ProjectLayout project={project} {...props} />
+
+Logos I have designed for various clients and projects.
+
+<Image src={imgAchaean} alt="Achaean Sports Logo" />
+<Image src={imgBehuddle} alt="Behuddle Logo" />
+<Image src={imgCloudVolumes} alt="CloudVolumes Logo" />
+<Image src={imgColorTokens} alt="ColorTokens Logo" />
+<Image src={imgExofense} alt="Exofense Logo" />
+<Image src={imgIOSpree} alt="IOSpree Logo" />
+<Image src={imgSVL} alt="Silicon Valley Landscape Logo" />
+<Image src={imgSilverlief} alt="Silverlief Logo" />

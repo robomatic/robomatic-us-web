@@ -1,0 +1,90 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import imgGalacticSkyIdeations from './images/galacticsky-ideations.jpg'
+import imgGSAppFlow from './images/gs-app-flow-80.jpg'
+import imgGSIdeation from './images/gs-ideation-80.jpg'
+import imgGSInfoArch from './images/gs-info-arch-80.jpg'
+import imgGSViewFlow from './images/gs-view-flow-80.jpg'
+import imgGSTracking from './images/galacticsky-tracking.png'
+
+export const article = {
+  author: 'Rob Schuler',
+  date: '2020-05-25',
+  title: 'Vector GalacticSky Design Case Study',
+  description: `A case study for Vector's GalacticSky Satellite application platform design. I review the process
+     of designing a web application to visualize and manage GalacticSky resources in a simple, intuitive UI.`,
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+Vector is a space innovator that connects space startups with
+affordable and reliable launch vehicles as well as a
+software-defined satellites platform (GalacticSky). Its goal is to
+eliminate the need to build hardware or even launch a satellite
+for customers with certain applications.
+
+## Challenge
+
+The challenge was to design a web application to visualize and
+manage GalacticSky resources in a simple, easy-to-use UI. These
+resources included the space vehicle (satellite hardware system)
+and the compute network and storage infranstructure as well as any
+other hardware enabled by the system for management.
+
+## Design + Prototyping
+
+This extremely large undertaking was broken down into smaller
+goals; visualization of the spacecraft and its resources,
+visualization and monitoring of resource health and performance,
+and deploying and managing of software applications on the
+virtualized infrastructure.
+
+Visualizing hardware in orbit was important for understanding the
+physical location as it relates to communication with ground
+systems or other satellites.
+
+<figure>
+  <Image src={imgGSIdeation} alt="Galactic Sky Ideations" />
+</figure>
+
+<figure>
+  <Image src={imgGalacticSkyIdeations} alt="Galactic Sky Ideations" />
+</figure>
+
+<figure>
+  <Image src={imgGSInfoArch} alt="Galactic Sky Information Architecture" />
+</figure>
+
+Monitoring systems and applications is important for monitoring
+and maintaining deployed applications to keep them operational and
+efficient.
+
+<figure>
+  <Image src={imgGSViewFlow} alt="Galactic Sky UI Views Flow Diagram" />
+</figure>
+
+Easily deploying applications was critical to improving and
+enhancing customer’s satellite applications and operations.
+
+<figure>
+  <Image src={imgGSAppFlow} alt="Galactic Sky Application Flow Diagram" />
+</figure>
+
+The UI evolved based on user feedback and continued research with
+subject matter experts. These discussions lead to new designs of
+the interface to solve unique customer applications.
+
+<figure>
+  <Image src={imgGSTracking} alt="Galactic Sky Tracking UI" />
+  <figcaption>GalacticSky Virtual Constellations</figcaption>
+</figure>
+
+## Reflection
+
+The outcome of the design gave form to a new way of looking at
+infrastructure management. A small step toward solving UI
+challenges in this emerging new-space network frontier.

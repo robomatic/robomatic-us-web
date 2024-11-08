@@ -1,0 +1,39 @@
+import { ProjectLayout } from '@/components/ProjectLayout'
+import imgColorTokensDashboard from './images/colortokens-dashboard.png'
+
+export const project = {
+  author: 'Rob Schuler',
+  date: '2016-01-01',
+  title: 'ColorTokens Network Security Platform',
+  company: 'ColorTokens',
+  description:
+    "Design and development work on ColorTokens's GalacticSky satellite platform and marketing website.",
+  stats: [
+    {
+      label: 'Visual Design',
+      value: 100,
+    },
+    { label: 'UX Design', value: 100 },
+    {
+      label: 'Frontend Dev',
+      value: 50,
+    },
+    {
+      label: 'Backend Dev',
+      value: 25,
+    },
+  ],
+  logo: imgColorTokensDashboard,
+  image: imgColorTokensDashboard,
+}
+
+export const metadata = {
+  title: project.title,
+  description: project.description,
+}
+
+export default (props) => <ProjectLayout project={project} {...props} />
+
+Design and development work on ColorTokens's GalacticSky satellite platform and marketing website.
+
+<Image src={imgColorTokensDashboard} alt="ColorTokens Dashboard Concept" />

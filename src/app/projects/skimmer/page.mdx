@@ -1,0 +1,46 @@
+import { ProjectLayout } from '@/components/ProjectLayout'
+import imgSkimmerInvoicing from './images/invoicing.png'
+import imgSkimmerInvoiceDetail from './images/skimmer-invoice-detail.png'
+import imgPayments from './images/payments-learn-more.png'
+import logo from './images/skimmer-icon.svg'
+
+export const project = {
+  date: '2022-01-01',
+  title: 'Skimmer Pool Service App',
+  company: 'Skimmer',
+  description: "Design and development of Skimmer's Pool Service Software.",
+  stats: [
+    {
+      label: 'Visual Design',
+      value: 25,
+    },
+    { label: 'UX Design', value: 90 },
+    {
+      label: 'Frontend Dev',
+      value: 50,
+    },
+    {
+      label: 'Backend Dev',
+      value: 0,
+    },
+  ],
+  logo,
+  image: imgSkimmerInvoiceDetail,
+}
+
+export const metadata = {
+  title: project.title,
+  description: project.description,
+}
+
+export default (props) => <ProjectLayout project={project} {...props} />
+
+The product features I designed included invoicing, payments, and billing functionality. On the development side, I worked on the front-end architecture and development helping them transition to React as the primary framework.
+
+<a variant="secondary" href="/articles/skimmer-case-study">
+  Read the Skimmer case study
+</a>
+
+<Image src={imgSkimmerInvoicing} alt="Skimmer Ionvoicing" />
+<Image src={imgSkimmerInvoiceDetail} alt="Skimmer Ionvoice Detail" />
+<Image src={imgPayments} alt="Skimmer Payments Onboarding" />

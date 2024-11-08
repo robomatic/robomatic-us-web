@@ -1,0 +1,38 @@
+import { ProjectLayout } from '@/components/ProjectLayout'
+import imgBellaVistaWeb from './images/bella-vista-web.jpg'
+
+export const project = {
+  author: 'Rob Schuler',
+  date: '2017-01-01',
+  title: 'Bella Vista Marketing Website',
+  company: 'Bella Vista',
+  description: "Design and Development of Bella Vista of Almaden's website.",
+  stats: [
+    {
+      label: 'Visual Design',
+      value: 25,
+    },
+    { label: 'UX Design', value: 10 },
+    {
+      label: 'Frontend Dev',
+      value: 100,
+    },
+    {
+      label: 'Backend Dev',
+      value: 0,
+    },
+  ],
+  logo: imgBellaVistaWeb,
+  image: imgBellaVistaWeb,
+}
+
+export const metadata = {
+  title: project.title,
+  description: project.description,
+}
+
+export default (props) => <ProjectLayout project={project} {...props} />
+
+Designed and developed this marketing website for Bella Vista of Almaden.
+
+<Image src={imgBellaVistaWeb} alt="Bella Vista of Almaden Marketing Website" />

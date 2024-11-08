@@ -1,0 +1,44 @@
+import { ProjectLayout } from '@/components/ProjectLayout'
+import imgGVTHome from './images/gvt-home.png'
+import imgGVTProducts from './images/gvt-products.png'
+import logo from './images/gvt-logo.svg'
+
+export const project = {
+  date: '2023-01-01',
+  title: 'GVT Custom CMS Marketing Website',
+  company: 'GVT',
+  description:
+    'A custom designed CMS marketing site including product inventory management tool for GVT.',
+  stats: [
+    {
+      label: 'Visual Design',
+      value: 50,
+    },
+    { label: 'UX Design', value: 100 },
+    {
+      label: 'Frontend Dev',
+      value: 100,
+    },
+    {
+      label: 'Backend Dev',
+      value: 100,
+    },
+  ],
+  logo,
+  image: imgGVTProducts,
+}
+
+export const metadata = {
+  title: project.title,
+  description: project.description,
+}
+
+export default (props) => <ProjectLayout project={project} {...props} />
+
+Designed and developed a custom CMS marketing website for GVT, which included a
+product inventory management tool. This tailored solution allowed GVT to effectively
+showcase their offerings and streamline their inventory processes, providing a seamless
+experience for the company and a modern, professional, and responsive website for their customers.
+
+<Image src={imgGVTHome} alt="GVT Home page" />
+<Image src={imgGVTProducts} alt="GVT Products page" />

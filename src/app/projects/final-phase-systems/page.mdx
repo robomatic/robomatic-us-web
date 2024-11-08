@@ -1,0 +1,42 @@
+import { ProjectLayout } from '@/components/ProjectLayout'
+import imgNextmoveBaysList from './images/nextmove-bays-list.png'
+import imgNextmoveToolsView from './images/nextmove-tools-view.png'
+import { log } from 'console'
+
+export const project = {
+  date: '2017-01-01',
+  title: 'NextMove Manufacturing Application',
+  company: 'Final Phase Systems',
+  description:
+    "Design and development work on Final Phase Systems' NextMove application.",
+  stats: [
+    {
+      label: 'Visual Design',
+      value: 100,
+    },
+    { label: 'UX Design', value: 100 },
+    {
+      label: 'Frontend Dev',
+      value: 100,
+    },
+    {
+      label: 'Backend Dev',
+      value: 0,
+    },
+  ],
+  logo: imgNextmoveBaysList,
+  image: imgNextmoveToolsView,
+}
+
+export const metadata = {
+  title: project.title,
+  description: project.description,
+}
+
+export default (props) => <ProjectLayout project={project} {...props} />
+
+Designed and developed Final Phase Systems' NextMove web application,
+including architecting the front-end using Typescript for this semi-conductor manufacturing software.
+
+<Image src={imgNextmoveBaysList} alt="NextMove Bays List" />
+<Image src={imgNextmoveToolsView} alt="NextMove Tools View" />

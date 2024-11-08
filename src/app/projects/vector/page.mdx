@@ -1,0 +1,53 @@
+import { ProjectLayout } from '@/components/ProjectLayout'
+import imgGalacticSky from './images/galacticsky-tracking.png'
+import imgVectorLaunch from './images/vector-launch.png'
+import imgVectorWeb from './images/vector-web.png'
+import logo from './images/vector-logo-icon.svg'
+
+export const project = {
+  date: '2020-01-01',
+  title: 'Vector GalacticSky Satellite Platform',
+  company: 'Vector Launch',
+  description:
+    'Vector GalacticSky satellite platform and marketing website design and development.',
+  stats: [
+    {
+      label: 'Visual Design',
+      value: 100,
+    },
+    { label: 'UX Design', value: 100 },
+    {
+      label: 'Frontend Dev',
+      value: 100,
+    },
+    {
+      label: 'Backend Dev',
+      value: 85,
+    },
+  ],
+  logo,
+  image: imgGalacticSky,
+}
+
+export const metadata = {
+  title: project.title,
+  description: project.description,
+}
+
+export default (props) => <ProjectLayout project={project} {...props} />
+
+For the GalacticSky satellite platform, I handled feature planning, UX/UI design,
+and full stack development, creating an intuitive and powerful visualization tool and
+satellite-based cloud management solution.
+I also designed and developed Vector's modern, responsive CMS marketing website,
+showcasing their brand and expertise in the space industry. It featured 3D animations
+and interactive launch planning tool for customers to visualize their satellite launches
+using Vector's different orbital delivery options.
+
+<a variant="secondary" href={project.caseStudyLink}>
+  Read the Vector GalacticSky Design Case Study
+</a>
+
+<Image src={imgGalacticSky} alt="GalacticSky Satellite Platform" />
+<Image src={imgVectorWeb} alt="Vector Marketing Website" />
+<Image src={imgVectorLaunch} alt="Vector Launch Planning" />
