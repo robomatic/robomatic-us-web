@@ -69,7 +69,7 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            I&apos;m Rob Schuler. I live in Idaho, where I design and develop a
+            I&apos;m Rob Schuler. I live in Idaho where I design and develop a
             forest of ideas.
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
@@ -83,7 +83,7 @@ export default function About() {
               I&apos;m a software developer and product designer who specializes
               in creating unique and specialized, user-friendly digital
               products. My approach is rooted in a deep understanding of user
-              needs, business goals and a commitment to simplicity and
+              needs, business goals, and a commitment to simplicity and
               usability.
             </p>
             <p>
