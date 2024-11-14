@@ -11,8 +11,7 @@ export const metadata: Metadata = {
     default:
       'Rob Schuler - Product designer, software developer, and user experience designer.',
   },
-  description: `I'm Rob, a product designer and wanna-be entrepreneur based in Idaho. I'm the owner of Robomatic, 
-    a consultancy where we design and develop web applications for a variety of industries and purposes.`,
+  description: `Product designer and software developer.`,
   alternates: {
     types: {
       'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
