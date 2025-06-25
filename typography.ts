@@ -1,7 +1,8 @@
-import { type PluginUtils } from 'tailwindcss/types/config'
+import { type Config } from 'tailwindcss'
 
-export default function typographyStyles({ theme }: PluginUtils) {
-  return {
+export default {
+  theme: {
+    typography: ({ theme }) => ({
     invert: {
       css: {
         '--tw-prose-body': 'var(--tw-prose-invert-body)',
@@ -279,5 +280,6 @@ export default function typographyStyles({ theme }: PluginUtils) {
         },
       },
     },
-  }
-}
+  }),
+},
+} satisfies Config
