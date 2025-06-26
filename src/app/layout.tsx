@@ -8,10 +8,9 @@ import '@/styles/tailwind.css'
 export const metadata: Metadata = {
   title: {
     template: '%s - Rob Schuler',
-    default:
-      'Rob Schuler - Product designer, software developer, and user experience designer.',
+    default: 'Rob Schuler - Software developer and product designer.',
   },
-  description: `Product designer and software developer.`,
+  description: `Crafting world-class digital experiences with quality engineering and innovative design.`,
 }
 
 export default function RootLayout({
