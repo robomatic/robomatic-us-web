@@ -95,11 +95,11 @@ export default function About() {
               maintainable code that brings the design to life.
             </p>
             <p>
-              As a product designer, I focus on creating intuitive, visually
-              appealing interfaces that prioritize usability and user
-              satisfaction. On the development side, I have experience with
-              modern front-end and back-end technologies, and I pursue writing
-              clean, efficient, and self-documenting code.
+              As a product designer, I focus on creating custom tailored,
+              visually appealing interfaces with excellent user experience. On
+              the development side, I architect and develop applications that
+              will stand the test of time, producing clean, efficient, and
+              maintainable solutions.
             </p>
           </div>
         </div>

@@ -42,8 +42,9 @@ export default async function ProjectsPage() {
 
   return (
     <SimpleLayout
-      title="Design and development projects."
-      intro="Most of the work I do is proprietary to the companies I work for. Here is some of the projects I've worked on in the past"
+      title="Architecture, Design, and development projects."
+      intro="Most of the work I do is architecture, design and development for new or 
+      existing enterprise web applications. Here is some of the projects I've worked on in the past"
     >
       <ul
         role="list"
