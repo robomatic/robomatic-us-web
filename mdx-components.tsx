@@ -7,13 +7,9 @@ export function useMDXComponents(components: MDXComponents) {
     Image: (props: ImageProps) => <Image {...props} />,
     FigureImage: ({ src, alt, caption }: { caption?: string } & ImageProps) => {
       return (
-        <figure className="my-8">
+        <figure>
           <Image src={src} alt={alt} />
-          {caption && (
-            <figcaption className="mt-2 text-sm text-gray-500">
-              {caption}
-            </figcaption>
-          )}
+          {caption && <figcaption>{caption}</figcaption>}
         </figure>
       )
     },
