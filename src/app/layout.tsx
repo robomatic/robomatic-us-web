@@ -12,11 +12,6 @@ export const metadata: Metadata = {
       'Rob Schuler - Product designer, software developer, and user experience designer.',
   },
   description: `Product designer and software developer.`,
-  alternates: {
-    types: {
-      'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
-    },
-  },
 }
 
 export default function RootLayout({
