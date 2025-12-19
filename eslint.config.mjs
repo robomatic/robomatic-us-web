@@ -1,19 +1,13 @@
-import { FlatCompat } from '@eslint/eslintrc'
+import { defineConfig } from 'eslint/config'
+import nextCoreWebVitals from 'eslint-config-next/core-web-vitals'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 
-const compat = new FlatCompat({
-  // import.meta.dirname is available after Node.js v20.11.0
-  baseDirectory: import.meta.dirname,
-})
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
-/**
- * A custom ESLint configuration for libraries that use Next.js.
- *
- * @type {import("eslint").Linter.Config}
- * */
-const eslintConfig = [
-  ...compat.config({
-    extends: ['next/core-web-vitals', 'next/typescript', 'prettier'],
-  }),
-]
-
-export default eslintConfig
+export default defineConfig([
+  {
+    extends: [...nextCoreWebVitals],
+  },
+])
