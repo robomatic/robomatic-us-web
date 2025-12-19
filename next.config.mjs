@@ -1,6 +1,4 @@
-import rehypePrism from '@mapbox/rehype-prism'
-import nextMDX from '@next/mdx'
-import remarkGfm from 'remark-gfm'
+import createMDX from '@next/mdx'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -11,11 +9,10 @@ const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
 }
 
-const withMDX = nextMDX({
-  extension: /\.mdx?$/,
+const withMDX = createMDX({
   options: {
-    remarkPlugins: [remarkGfm],
-    rehypePlugins: [rehypePrism],
+    remarkPlugins: ['remark-gfm'],
+    rehypePlugins: [],
   },
 })
 
