@@ -47,19 +47,19 @@ export default function Uses() {
     >
       <div className="space-y-20">
         <ToolsSection title="Workstation">
-          <Tool title="16” MacBook Pro, T2, 64GB RAM (2019)">
-            The old workhorse. I&apos;ve been using this machine for many years
-            now. In 2022 I switched to Arch Linux. The user experience and
-            software management have improved significantly over the years and I
-            am more confident of the stability and performance of the OS
-            especially for development. Surprisingly, I am able to conduct all
-            the UI design work I need thanks to Figma, Inkscape and Gimp.
+          <Tool title="16” MacBook Pro, M4 Max, 48GB RAM (2024)">
+            After setting up a large project on my old 2019 MacBook Pro and
+            trying to build it, I realized I needed a more powerful machine.
+            Build times were extremely slow even using NX with 5 parallel
+            processes. The old T2 mac would spin up the fan even for light
+            tasks. Now I cannot remember the last time I heard the whir of the
+            fan, and not to mention feeling slowness in builds.
           </Tool>
           <Tool title="LG 21:9 Ultrawide Curved IPS LED (3440x1440 @ 60hz)">
             An older monitor by todays standards but I love the 21:9 aspect and
-            how it has improved my workflow. I alsu utilize the laptop screen as
+            how it has improved my workflow. I also utilize the laptop screen as
             a secondary monitor, again optimizing the workflow by having
-            multiple windows open at once. Just realized this monitor is about 8
+            multiple windows open at once. Just realized this monitor is about 9
             years old!
           </Tool>
           <Tool title="Logitech Prodigy Keyboard">
@@ -86,19 +86,32 @@ export default function Uses() {
           </Tool>
         </ToolsSection>
         <ToolsSection title="Development tools">
-          <Tool title="Sublime Text 4">
-            Solid editor, fast and configurable. My go-to with various text,
-            code or CSV files, you name it.
+          <Tool title="Cursor">
+            With the agentic development shift Cursor has be a big improvement
+            for speed and efficiency. I will still toggle using VS Code for some
+            tasks but Cursor is my go to for most of my development work now.
           </Tool>
           <Tool title="VS Code">
-            Using Github Copilot for my development work currently lends itself
-            better to work with VS Code.
+            The agentic development with VS Code feels more controlled and is
+            still a great tool for development. An odd result from the
+            transition to agentic workflows causes me to think about token usage
+            and I mainly use VS Code to burn tokens after I've reached caps in
+            Cursor.
+          </Tool>
+          <Tool title="Sublime Text 4">
+            I now have relegated sublime to a note taker quick editor for mostly
+            text manipulation, formatting, and CSV tasks, like a quick loading
+            scratchpad.
           </Tool>
         </ToolsSection>
         <ToolsSection title="Design">
           <Tool title="Figma">
-            Great tool for UI design and prototyping. I&apos;ve used it for
-            years and it has only gotten better.
+            AI tools are proving themselves beneficial in Figma as they roll out
+            more. I still haven't been super happy with the disconnect from
+            design to development when it comes to the workflow and feature
+            support. Great tool for UI design and prototyping. I&apos;ve used it
+            for years but am starting to wonder how more AI integrated tooling
+            like Pencil will change things.
           </Tool>
         </ToolsSection>
         <ToolsSection title="Productivity">
