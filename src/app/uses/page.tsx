@@ -95,8 +95,8 @@ export default function Uses() {
             The agentic development with VS Code feels more controlled and is
             still a great tool for development. An odd result from the
             transition to agentic workflows causes me to think about token usage
-            and I mainly use VS Code to burn tokens after I've reached caps in
-            Cursor.
+            and I mainly use VS Code to burn tokens after I&apos;ve reached caps
+            in Cursor.
           </Tool>
           <Tool title="Sublime Text 4">
             I now have relegated sublime to a note taker quick editor for mostly
@@ -107,7 +107,7 @@ export default function Uses() {
         <ToolsSection title="Design">
           <Tool title="Figma">
             AI tools are proving themselves beneficial in Figma as they roll out
-            more. I still haven't been super happy with the disconnect from
+            more. I still haven&apos;t been super happy with the disconnect from
             design to development when it comes to the workflow and feature
             support. Great tool for UI design and prototyping. I&apos;ve used it
             for years but am starting to wonder how more AI integrated tooling

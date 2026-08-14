@@ -1,0 +1,3 @@
+{
+  "ignoreDependencies": ["autoprefixer", "sharp", "@mapbox/rehype-prism"]
+}
