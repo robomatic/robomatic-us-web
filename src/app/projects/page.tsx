@@ -1,14 +1,14 @@
-import { type Metadata } from 'next'
-import Image from 'next/image'
+import { type Metadata } from "next";
+import Image from "next/image";
 
-import { Card } from '@/components/Card'
-import { SimpleLayout } from '@/components/SimpleLayout'
-import { getAllProjects, ProjectWithSlug } from '@/lib/projects'
+import { Card } from "@/components/Card";
+import { SimpleLayout } from "@/components/SimpleLayout";
+import { getAllProjects, ProjectWithSlug } from "@/lib/projects";
 
 export const metadata: Metadata = {
-  title: 'Projects',
-  description: 'Design and development projects.',
-}
+  title: "Projects",
+  description: "Design and development projects.",
+};
 
 async function Project({ project }: { project: ProjectWithSlug }) {
   return (
@@ -24,9 +24,7 @@ async function Project({ project }: { project: ProjectWithSlug }) {
           />
         </div>
         <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-          <Card.Link href={`/projects/${project.slug}`}>
-            {project.title}
-          </Card.Link>
+          <Card.Link href={`/projects/${project.slug}`}>{project.title}</Card.Link>
         </h2>
         <Card.Description>{project.description}</Card.Description>
         <p className="relative z-10 mt-6 flex gap-2 text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
@@ -34,25 +32,22 @@ async function Project({ project }: { project: ProjectWithSlug }) {
         </p>
       </Card>
     </li>
-  )
+  );
 }
 
 export default async function ProjectsPage() {
-  const projects = await getAllProjects()
+  const projects = await getAllProjects();
 
   return (
     <SimpleLayout
       title="Design and development projects."
       intro="Most of the work I do is design and development for modern web applications. Here are just some of the many projects I've enjoyed working on."
     >
-      <ul
-        role="list"
-        className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
-      >
+      <ul role="list" className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
           <Project key={project.slug} project={project} />
         ))}
       </ul>
     </SimpleLayout>
-  )
+  );
 }

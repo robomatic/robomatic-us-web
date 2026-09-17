@@ -1,22 +1,13 @@
-import Link from 'next/link'
+import Link from "next/link";
 
-import { ContainerInner, ContainerOuter } from '@/components/Container'
+import { ContainerInner, ContainerOuter } from "@/components/Container";
 
-function NavLink({
-  href,
-  children,
-}: {
-  href: string
-  children: React.ReactNode
-}) {
+function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
-    <Link
-      href={href}
-      className="transition hover:text-teal-500 dark:hover:text-teal-400"
-    >
+    <Link href={href} className="transition hover:text-teal-500 dark:hover:text-teal-400">
       {children}
     </Link>
-  )
+  );
 }
 
 export function Footer() {
@@ -34,13 +25,12 @@ export function Footer() {
                 <NavLink href="/uses">Uses</NavLink>
               </div>
               <p className="text-sm text-zinc-400 dark:text-zinc-500">
-                &copy; {new Date().getFullYear()} Rob Schuler. All rights
-                reserved.
+                &copy; {new Date().getFullYear()} Rob Schuler. All rights reserved.
               </p>
             </div>
           </ContainerInner>
         </div>
       </ContainerOuter>
     </footer>
-  )
+  );
 }

@@ -1,15 +1,15 @@
-import { Container } from '@/components/Container'
-import { Prose } from '@/components/Prose'
-import { type ArticleWithSlug } from '@/lib/articles'
-import { formatDate } from '@/lib/formatDate'
-import { BackButton } from './BackButton'
+import { Container } from "@/components/Container";
+import { Prose } from "@/components/Prose";
+import { type ArticleWithSlug } from "@/lib/articles";
+import { formatDate } from "@/lib/formatDate";
+import { BackButton } from "./BackButton";
 
 export function ArticleLayout({
   article,
   children,
 }: {
-  article: ArticleWithSlug
-  children: React.ReactNode
+  article: ArticleWithSlug;
+  children: React.ReactNode;
 }) {
   return (
     <Container className="mt-16 lg:mt-32">
@@ -36,5 +36,5 @@ export function ArticleLayout({
         </div>
       </div>
     </Container>
-  )
+  );
 }

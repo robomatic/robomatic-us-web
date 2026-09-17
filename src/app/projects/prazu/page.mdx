@@ -1,4 +1,4 @@
-import { ProjectLayout } from '@/components/ProjectLayout'
+import { withProjectLayout } from '@/components/ProjectLayout'
 import imgPrazuNebula from './images/prazu-nebula.png'
 import imgPrazuNebulaApps from './images/prazu-nebula-apps-view.png'
 import imgPrazuNebulaClusterView from './images/prazu-nebula-cluster-view.png'
@@ -33,7 +33,7 @@ export const metadata = {
   description: project.description,
 }
 
-export default (props) => <ProjectLayout project={project} {...props} />
+export default withProjectLayout(project)
 
 Designed for a network management application interface for Prazu Nebula. Included a
 cluster view and dashboard for managing network resources.

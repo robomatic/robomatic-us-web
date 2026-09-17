@@ -1,20 +1,13 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": [
-    "nextjs"
-  ],
+  "plugins": ["nextjs"],
   "categories": {
     "correctness": "off"
   },
   "env": {
     "builtin": true
   },
-  "ignorePatterns": [
-    ".next/**",
-    "out/**",
-    "build/**",
-    "next-env.d.ts"
-  ],
+  "ignorePatterns": [".next/**", "out/**", "build/**", "next-env.d.ts", "**/*.mdx"],
   "rules": {
     "nextjs/google-font-display": "warn",
     "nextjs/google-font-preconnect": "warn",
@@ -40,9 +33,7 @@
   },
   "overrides": [
     {
-      "files": [
-        "**/*.{js,jsx,mjs,ts,tsx,mts,cts}"
-      ],
+      "files": ["**/*.{js,jsx,mjs,ts,tsx,mts,cts}"],
       "rules": {
         "react/display-name": "error",
         "react/jsx-key": "error",
@@ -65,12 +56,8 @@
         "jsx-a11y/alt-text": [
           "warn",
           {
-            "elements": [
-              "img"
-            ],
-            "img": [
-              "Image"
-            ]
+            "elements": ["img"],
+            "img": ["Image"]
           }
         ],
         "jsx-a11y/aria-props": "warn",
@@ -1177,11 +1164,7 @@
         "XRWebGLLayer": "readonly",
         "XSLTProcessor": "readonly"
       },
-      "plugins": [
-        "react",
-        "import",
-        "jsx-a11y"
-      ],
+      "plugins": ["react", "import", "jsx-a11y"],
       "env": {
         "node": true
       }
