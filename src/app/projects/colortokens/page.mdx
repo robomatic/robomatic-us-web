@@ -1,39 +1,38 @@
-import { withProjectLayout } from '@/components/ProjectLayout'
-import imgColorTokensDashboard from './images/colortokens-dashboard.png'
-import imgPreview from './images/colortokens-app-preview.jpg'
+import { withProjectLayout } from "@/components/ProjectLayout";
+import imgColorTokensDashboard from "./images/colortokens-dashboard.png";
+import imgPreview from "./images/colortokens-app-preview.jpg";
 
 export const project = {
-  author: 'Rob Schuler',
-  date: '2016-01-01',
-  title: 'ColorTokens Network Security Platform',
-  company: 'ColorTokens',
-  description:
-    'Network security platform UI/UX design and frontend architecture & development.',
+  author: "Rob Schuler",
+  date: "2016-01-01",
+  title: "ColorTokens Network Security Platform",
+  company: "ColorTokens",
+  description: "Network security platform UI/UX design and frontend architecture & development.",
   stats: [
     {
-      label: 'Visual Design',
+      label: "Visual Design",
       value: 100,
     },
-    { label: 'UX Design', value: 100 },
+    { label: "UX Design", value: 100 },
     {
-      label: 'Frontend Dev',
+      label: "Frontend Dev",
       value: 50,
     },
     {
-      label: 'Backend Dev',
+      label: "Backend Dev",
       value: 25,
     },
   ],
   logo: imgColorTokensDashboard,
   image: imgPreview,
-}
+};
 
 export const metadata = {
   title: project.title,
   description: project.description,
-}
+};
 
-export default withProjectLayout(project)
+export default withProjectLayout(project);
 
 ColorTokens needed interface concepts that could make network security data easier to understand and act on. I worked on product design and front-end development for dashboard views that translated complex infrastructure activity into clearer operational workflows.
 

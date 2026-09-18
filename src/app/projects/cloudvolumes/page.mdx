@@ -1,41 +1,41 @@
-import { withProjectLayout } from '@/components/ProjectLayout'
-import imgManager from './images/cloudvolumes-manager.png'
-import imgWebHome from './images/cloudvolumes-web-home.png'
-import imgWebLayouts from './images/cloudvolumes-web-layouts.png'
-import imgPreview from './images/cloudvolumes-netapp-preview.jpg'
+import { withProjectLayout } from "@/components/ProjectLayout";
+import imgManager from "./images/cloudvolumes-manager.png";
+import imgWebHome from "./images/cloudvolumes-web-home.png";
+import imgWebLayouts from "./images/cloudvolumes-web-layouts.png";
+import imgPreview from "./images/cloudvolumes-netapp-preview.jpg";
 
 export const project = {
-  author: 'Rob Schuler',
-  date: '2015-01-01',
-  title: 'CloudVolumes',
-  company: 'CloudVolumes',
+  author: "Rob Schuler",
+  date: "2015-01-01",
+  title: "CloudVolumes",
+  company: "CloudVolumes",
   description:
-    'Branding, UI/UX design, frontend architecture & development for a application virtualization management company.',
+    "Branding, UI/UX design, frontend architecture & development for a application virtualization management company.",
   stats: [
     {
-      label: 'Visual Design',
+      label: "Visual Design",
       value: 100,
     },
-    { label: 'UX Design', value: 100 },
+    { label: "UX Design", value: 100 },
     {
-      label: 'Frontend Dev',
+      label: "Frontend Dev",
       value: 100,
     },
     {
-      label: 'Backend Dev',
+      label: "Backend Dev",
       value: 0,
     },
   ],
   logo: imgManager,
   image: imgPreview,
-}
+};
 
 export const metadata = {
   title: project.title,
   description: project.description,
-}
+};
 
-export default withProjectLayout(project)
+export default withProjectLayout(project);
 
 CloudVolumes needed a clearer interface for managing virtualized application infrastructure, along with a marketing site that could explain the product to prospective customers.
 

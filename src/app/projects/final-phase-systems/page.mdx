@@ -1,39 +1,38 @@
-import { withProjectLayout } from '@/components/ProjectLayout'
-import imgNextmoveBaysList from './images/nextmove-bays-list.png'
-import imgNextmoveToolsView from './images/nextmove-tools-view.png'
-import imgPreview from './images/fps-nextmove-app-preview.jpg'
+import { withProjectLayout } from "@/components/ProjectLayout";
+import imgNextmoveBaysList from "./images/nextmove-bays-list.png";
+import imgNextmoveToolsView from "./images/nextmove-tools-view.png";
+import imgPreview from "./images/fps-nextmove-app-preview.jpg";
 
 export const project = {
-  date: '2017-01-01',
-  title: 'FPS NextMove',
-  company: 'Final Phase Systems',
-  description:
-    'Front-end architecture and UI/UX design for fabrication facility management.',
+  date: "2017-01-01",
+  title: "FPS NextMove",
+  company: "Final Phase Systems",
+  description: "Front-end architecture and UI/UX design for fabrication facility management.",
   stats: [
     {
-      label: 'Visual Design',
+      label: "Visual Design",
       value: 100,
     },
-    { label: 'UX Design', value: 100 },
+    { label: "UX Design", value: 100 },
     {
-      label: 'Frontend Dev',
+      label: "Frontend Dev",
       value: 100,
     },
     {
-      label: 'Backend Dev',
+      label: "Backend Dev",
       value: 0,
     },
   ],
   logo: imgNextmoveBaysList,
   image: imgPreview,
-}
+};
 
 export const metadata = {
   title: project.title,
   description: project.description,
-}
+};
 
-export default withProjectLayout(project)
+export default withProjectLayout(project);
 
 Final Phase Systems needed a manufacturing application that could organize complex semiconductor workflows without overwhelming operators. I designed and developed the NextMove web application interface, including the front-end architecture in TypeScript.
 

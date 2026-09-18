@@ -9,7 +9,7 @@ export function ArticleLayout({
   children,
 }: {
   article: ArticleWithSlug;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }) {
   return (
     <Container className="mt-16 lg:mt-32">
@@ -37,4 +37,10 @@ export function ArticleLayout({
       </div>
     </Container>
   );
+}
+
+export function withArticleLayout(article: ArticleWithSlug) {
+  return function ArticlePage(props: { children?: React.ReactNode }) {
+    return <ArticleLayout article={article} {...props} />;
+  };
 }

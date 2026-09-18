@@ -9,7 +9,7 @@ export function ProjectLayout({
   children,
 }: {
   project: ProjectWithSlug;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }) {
   return (
     <Container className="mt-16 lg:mt-32">

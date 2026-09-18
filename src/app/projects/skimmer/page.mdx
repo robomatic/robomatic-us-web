@@ -1,41 +1,40 @@
-import { withProjectLayout } from '@/components/ProjectLayout'
-import imgSkimmerInvoicing from './images/invoicing.png'
-import imgSkimmerInvoiceDetail from './images/skimmer-invoice-detail.png'
-import imgPayments from './images/payments-learn-more.png'
-import imgPreviewWeb from './images/skimmer-app-preview.jpg'
-import logo from './images/skimmer-icon.svg'
+import { withProjectLayout } from "@/components/ProjectLayout";
+import imgSkimmerInvoicing from "./images/invoicing.png";
+import imgSkimmerInvoiceDetail from "./images/skimmer-invoice-detail.png";
+import imgPayments from "./images/payments-learn-more.png";
+import imgPreviewWeb from "./images/skimmer-app-preview.jpg";
+import logo from "./images/skimmer-icon.svg";
 
 export const project = {
-  date: '2022-01-01',
-  title: 'Skimmer Pool Service App',
-  company: 'Skimmer',
-  description:
-    "UI/UX design and frontend development for Skimmer's pool service software.",
+  date: "2022-01-01",
+  title: "Skimmer Pool Service App",
+  company: "Skimmer",
+  description: "UI/UX design and frontend development for Skimmer's pool service software.",
   stats: [
     {
-      label: 'Visual Design',
+      label: "Visual Design",
       value: 50,
     },
-    { label: 'UX Design', value: 90 },
+    { label: "UX Design", value: 90 },
     {
-      label: 'Frontend Dev',
+      label: "Frontend Dev",
       value: 50,
     },
     {
-      label: 'Backend Dev',
+      label: "Backend Dev",
       value: 0,
     },
   ],
   logo,
   image: imgPreviewWeb,
-}
+};
 
 export const metadata = {
   title: project.title,
   description: project.description,
-}
+};
 
-export default withProjectLayout(project)
+export default withProjectLayout(project);
 
 Skimmer needed complex invoicing, payments, and billing workflows to feel simple for pool service businesses. I designed the feature set around the day-to-day work of service teams, from invoice creation to payment handling and customer communication.
 

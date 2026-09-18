@@ -1,29 +1,29 @@
-import { ArticleLayout } from '@/components/ArticleLayout'
-import imgPaymentsLearnMore from './images/payments-learn-more.png'
-import imgDashboard from './images/dashboard.png'
-import imgInvoiceAdd from './images/invoice-add.png'
-import imgInvoiceDetail from './images/invoice-detail.png'
-import imgInvoiceEmail from './images/invoice-email.png'
-import imgInvoicing from './images/invoicing.png'
-import imgPaymentsFigma from './images/payments-figma.png'
-import imgPaymentsRefund from './images/payments-refund.png'
-import imgSkimmerFigmaProto from './images/skimmer-figma-proto.png'
-import imgSkimmerFigma from './images/skimmer-figma.png'
+import { withArticleLayout } from "@/components/ArticleLayout";
+import imgPaymentsLearnMore from "./images/payments-learn-more.png";
+import imgDashboard from "./images/dashboard.png";
+import imgInvoiceAdd from "./images/invoice-add.png";
+import imgInvoiceDetail from "./images/invoice-detail.png";
+import imgInvoiceEmail from "./images/invoice-email.png";
+import imgInvoicing from "./images/invoicing.png";
+import imgPaymentsFigma from "./images/payments-figma.png";
+import imgPaymentsRefund from "./images/payments-refund.png";
+import imgSkimmerFigmaProto from "./images/skimmer-figma-proto.png";
+import imgSkimmerFigma from "./images/skimmer-figma.png";
 
 export const article = {
-  author: 'Rob Schuler',
-  date: '2023-01-23',
-  title: 'Skimmer Invoicing and Payments Design Case Study',
+  author: "Rob Schuler",
+  date: "2023-01-23",
+  title: "Skimmer Invoicing and Payments Design Case Study",
   description:
-    'Design and build an invoicing and payments feature for Skimmer, a web and mobile SaaS application for pool service businesses.',
-}
+    "Design and build an invoicing and payments feature for Skimmer, a web and mobile SaaS application for pool service businesses.",
+};
 
 export const metadata = {
   title: article.title,
   description: article.description,
-}
+};
 
-export default (props) => <ArticleLayout article={article} {...props} />
+export default withArticleLayout(article);
 
 Skimmer is a web and mobile application SaaS for pool
 service businesses. It enables pool businesses to support service
@@ -61,11 +61,7 @@ interaction widgets and modals, were mocked up using figma. With
 that mockup a functional prototype was created using Figma
 documenting the interactions and various user experience implementation notes.
 
-<FigureImage
-  src={imgSkimmerFigma}
-  alt="Mockups done in Figma screenshot"
-  caption="Figma Mockups"
-/>
+<FigureImage src={imgSkimmerFigma} alt="Mockups done in Figma screenshot" caption="Figma Mockups" />
 
 <FigureImage
   src={imgSkimmerFigmaProto}
@@ -73,23 +69,11 @@ documenting the interactions and various user experience implementation notes.
   caption="Figma Prototype"
 />
 
-<FigureImage
-  src={imgInvoicing}
-  alt="Invoicing screenshot"
-  caption="Invoice Management"
-/>
+<FigureImage src={imgInvoicing} alt="Invoicing screenshot" caption="Invoice Management" />
 
-<FigureImage
-  src={imgInvoiceAdd}
-  alt="Add invoice screenshot"
-  caption="Add Invoice"
-/>
+<FigureImage src={imgInvoiceAdd} alt="Add invoice screenshot" caption="Add Invoice" />
 
-<FigureImage
-  src={imgInvoiceDetail}
-  alt="Invoice detail screenshot"
-  caption="Invoice Detail"
-/>
+<FigureImage src={imgInvoiceDetail} alt="Invoice detail screenshot" caption="Invoice Detail" />
 
 <FigureImage
   src={imgInvoiceEmail}
@@ -103,11 +87,7 @@ documenting the interactions and various user experience implementation notes.
   caption="Payments Refund Modal"
 />
 
-<FigureImage
-  src={imgDashboard}
-  alt="Dashboard screenshot"
-  caption="Dashboard Updates"
-/>
+<FigureImage src={imgDashboard} alt="Dashboard screenshot" caption="Dashboard Updates" />
 
 ## Reflection
 

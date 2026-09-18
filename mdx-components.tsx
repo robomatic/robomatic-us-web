@@ -4,7 +4,10 @@ import type { MDXComponents } from "mdx/types";
 export function useMDXComponents(components: MDXComponents) {
   return {
     ...components,
-    Image: (props: ImageProps) => <Image {...props} />,
+    Image: (props: ImageProps) => {
+      const { alt, ...rest } = props;
+      return <Image alt={alt} {...rest} />;
+    },
     FigureImage: ({ src, alt, caption }: { caption?: string } & ImageProps) => {
       return (
         <figure>
