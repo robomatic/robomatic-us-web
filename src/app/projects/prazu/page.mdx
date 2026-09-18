@@ -2,13 +2,15 @@ import { withProjectLayout } from '@/components/ProjectLayout'
 import imgPrazuNebula from './images/prazu-nebula.png'
 import imgPrazuNebulaApps from './images/prazu-nebula-apps-view.png'
 import imgPrazuNebulaClusterView from './images/prazu-nebula-cluster-view.png'
+import imgPreview from './images/prazu-nebula-preview.jpg'
 import logo from './images/prazu-logo.svg'
 
 export const project = {
   date: '2018-01-01',
-  title: 'Prazu Nebula Network Management Application',
+  title: 'Prazu Nebula',
   company: 'Prazu',
-  description: 'User interface and user experience design.',
+  description:
+    'Branding, UI/UX design, and frontend development for a network management dashboard.',
   stats: [
     {
       label: 'Visual Design',
@@ -25,7 +27,7 @@ export const project = {
     },
   ],
   logo,
-  image: imgPrazuNebula,
+  image: imgPreview,
 }
 
 export const metadata = {
@@ -35,8 +37,9 @@ export const metadata = {
 
 export default withProjectLayout(project)
 
-Designed for a network management application interface for Prazu Nebula. Included a
-cluster view and dashboard for managing network resources.
+Prazu Nebula needed a network management interface that could make clusters, applications, and infrastructure resources easier to understand at a glance.
+
+I designed dashboard and cluster views that organized complex system data into a more navigable product experience for monitoring and managing network resources.
 
 <Image src={imgPrazuNebula} alt="Nebula App" />
 <Image src={imgPrazuNebulaApps} alt="Nebula Apps View" />

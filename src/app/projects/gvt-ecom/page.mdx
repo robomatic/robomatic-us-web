@@ -1,0 +1,44 @@
+import { withProjectLayout } from '@/components/ProjectLayout'
+import imgGVTShopHome from './images/gvt-shop-home.png'
+import imgGVTShopProducts from './images/gvt-shop-products.png'
+import imgPreview from './images/gvt-shop-preview.jpg'
+import logo from './images/gvt-logo.png'
+
+export const project = {
+  date: '2025-05-01',
+  title: 'GVT B2B E-commerce',
+  company: 'GVT Inc.',
+  description:
+    'E-commerce storefront for B2B sales, inventory management, and fulfillment.',
+  stats: [
+    {
+      label: 'Visual Design',
+      value: 50,
+    },
+    { label: 'UX Design', value: 100 },
+    {
+      label: 'Frontend Dev',
+      value: 100,
+    },
+    {
+      label: 'Shopify Dev',
+      value: 100,
+    },
+  ],
+  logo,
+  image: imgPreview,
+}
+
+export const metadata = {
+  title: project.title,
+  description: project.description,
+}
+
+export default withProjectLayout(project)
+
+GVT needed more than a product catalog. They needed an online sales channel that could support retail customers, B2B buyers, inventory management, and fulfillment in one place.
+
+I adapted the original design into a custom Shopify storefront tailored to GVT's sales workflow. The finished site gave customers a polished shopping experience while giving the internal team a more practical way to manage products, orders, and growth.
+
+<Image src={imgGVTShopHome} alt="GVT Shop Home page" />
+<Image src={imgGVTShopProducts} alt="GVT Shop Products page" />

@@ -1,14 +1,14 @@
-import { ProjectLayout } from '@/components/ProjectLayout'
+import { withProjectLayout } from '@/components/ProjectLayout'
 import imgNextmoveBaysList from './images/nextmove-bays-list.png'
 import imgNextmoveToolsView from './images/nextmove-tools-view.png'
-import { log } from 'console'
+import imgPreview from './images/fps-nextmove-app-preview.jpg'
 
 export const project = {
   date: '2017-01-01',
-  title: 'NextMove Manufacturing Application',
+  title: 'FPS NextMove',
   company: 'Final Phase Systems',
   description:
-    "Design and development work on Final Phase Systems' NextMove application.",
+    'Front-end architecture and UI/UX design for fabrication facility management.',
   stats: [
     {
       label: 'Visual Design',
@@ -25,7 +25,7 @@ export const project = {
     },
   ],
   logo: imgNextmoveBaysList,
-  image: imgNextmoveToolsView,
+  image: imgPreview,
 }
 
 export const metadata = {
@@ -33,10 +33,11 @@ export const metadata = {
   description: project.description,
 }
 
-export default (props) => <ProjectLayout project={project} {...props} />
+export default withProjectLayout(project)
 
-Designed and developed Final Phase Systems' NextMove web application,
-including architecting the front-end using Typescript for this semi-conductor manufacturing software.
+Final Phase Systems needed a manufacturing application that could organize complex semiconductor workflows without overwhelming operators. I designed and developed the NextMove web application interface, including the front-end architecture in TypeScript.
+
+The work focused on making operational data easier to scan, manage, and act on inside a specialized production environment.
 
 <Image src={imgNextmoveBaysList} alt="NextMove Bays List" />
 <Image src={imgNextmoveToolsView} alt="NextMove Tools View" />

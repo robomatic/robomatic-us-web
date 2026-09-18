@@ -1,15 +1,16 @@
-import { ProjectLayout } from '@/components/ProjectLayout'
+import { withProjectLayout } from '@/components/ProjectLayout'
 import imgManager from './images/cloudvolumes-manager.png'
 import imgWebHome from './images/cloudvolumes-web-home.png'
 import imgWebLayouts from './images/cloudvolumes-web-layouts.png'
+import imgPreview from './images/cloudvolumes-netapp-preview.jpg'
 
 export const project = {
   author: 'Rob Schuler',
   date: '2015-01-01',
-  title: 'CloudVolumes NetApp Manager Application and Marketing Website',
+  title: 'CloudVolumes',
   company: 'CloudVolumes',
   description:
-    "Design and development work on CloudVolumes' Manager application and marketing website.",
+    'Branding, UI/UX design, frontend architecture & development for a application virtualization management company.',
   stats: [
     {
       label: 'Visual Design',
@@ -26,7 +27,7 @@ export const project = {
     },
   ],
   logo: imgManager,
-  image: imgWebHome,
+  image: imgPreview,
 }
 
 export const metadata = {
@@ -34,10 +35,11 @@ export const metadata = {
   description: project.description,
 }
 
-export default (props) => <ProjectLayout project={project} {...props} />
+export default withProjectLayout(project)
 
-Designed and developed the UI for this virtualized application management software. Included
-the front-end architecture of the application and design and development of their CMS marketing website.
+CloudVolumes needed a clearer interface for managing virtualized application infrastructure, along with a marketing site that could explain the product to prospective customers.
+
+I designed and developed the application UI, helped establish the front-end architecture, and built the CMS-powered marketing website that supported the company's product story.
 
 <Image src={imgManager} alt="CloudVolumes Manager App" />
 <Image src={imgWebHome} alt="CloudVolumes Web Homepage" />

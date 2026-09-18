@@ -1,5 +1,6 @@
-import { ProjectLayout } from '@/components/ProjectLayout'
+import { withProjectLayout } from '@/components/ProjectLayout'
 import imgColorTokensDashboard from './images/colortokens-dashboard.png'
+import imgPreview from './images/colortokens-app-preview.jpg'
 
 export const project = {
   author: 'Rob Schuler',
@@ -7,7 +8,7 @@ export const project = {
   title: 'ColorTokens Network Security Platform',
   company: 'ColorTokens',
   description:
-    "Design and development work on ColorTokens's GalacticSky satellite platform and marketing website.",
+    'Network security platform UI/UX design and frontend architecture & development.',
   stats: [
     {
       label: 'Visual Design',
@@ -24,7 +25,7 @@ export const project = {
     },
   ],
   logo: imgColorTokensDashboard,
-  image: imgColorTokensDashboard,
+  image: imgPreview,
 }
 
 export const metadata = {
@@ -32,8 +33,10 @@ export const metadata = {
   description: project.description,
 }
 
-export default (props) => <ProjectLayout project={project} {...props} />
+export default withProjectLayout(project)
 
-Design and development work on ColorTokens's GalacticSky satellite platform and marketing website.
+ColorTokens needed interface concepts that could make network security data easier to understand and act on. I worked on product design and front-end development for dashboard views that translated complex infrastructure activity into clearer operational workflows.
+
+The result was a more focused visual direction for a security platform where clarity, confidence, and quick decision-making mattered.
 
 <Image src={imgColorTokensDashboard} alt="ColorTokens Dashboard Concept" />

@@ -1,12 +1,14 @@
-import { ProjectLayout } from '@/components/ProjectLayout'
+import { withProjectLayout } from '@/components/ProjectLayout'
 import imgBellaVistaWeb from './images/bella-vista-web.jpg'
+import imgPreview from './images/bella-vista-web-preview.jpg'
 
 export const project = {
   author: 'Rob Schuler',
   date: '2017-01-01',
-  title: 'Bella Vista Marketing Website',
-  company: 'Bella Vista',
-  description: "Design and Development of Bella Vista of Almaden's website.",
+  title: 'Bella Vista of Almaden',
+  company: 'Bella Vista of Almaden',
+  description:
+    'Branding, interactive design, and frontend development for a winery and wedding event venue marketing website.',
   stats: [
     {
       label: 'Visual Design',
@@ -23,7 +25,7 @@ export const project = {
     },
   ],
   logo: imgBellaVistaWeb,
-  image: imgBellaVistaWeb,
+  image: imgPreview,
 }
 
 export const metadata = {
@@ -31,8 +33,8 @@ export const metadata = {
   description: project.description,
 }
 
-export default (props) => <ProjectLayout project={project} {...props} />
+export default withProjectLayout(project)
 
-Designed and developed this marketing website for Bella Vista of Almaden.
+Bella Vista of Almaden needed a web presence that could present its community with more polish, clarity, and trust. I designed and developed a custom marketing website focused on making key information easy to find while giving the brand a more refined digital home.
 
 <Image src={imgBellaVistaWeb} alt="Bella Vista of Almaden Marketing Website" />

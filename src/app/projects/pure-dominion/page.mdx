@@ -1,0 +1,42 @@
+import { withProjectLayout } from '@/components/ProjectLayout'
+import imgPdShopCollection from './images/pure-dominion-shop-collection2.png'
+import imgPdProduct from './images/pure-dominion-shop-product.png'
+import imgPdPreview from './images/pure-dominion-preview.jpg'
+import logo from './images/pure-dominion-logo-icon.svg'
+
+export const project = {
+  date: '2026-09-17',
+  title: 'Pure Dominion Skincare',
+  company: 'Pure Dominion',
+  description:
+    'Branding, product design, and storefront development for a luxury skincare direct to consumer brand and line of products.',
+  stats: [
+    {
+      label: 'Branding Design',
+      value: 100,
+    },
+    { label: 'Product Design', value: 100 },
+    {
+      label: 'Visual Design',
+      value: 100,
+    },
+    {
+      label: 'Shopify Dev',
+      value: 100,
+    },
+  ],
+  logo: logo,
+  image: imgPdPreview,
+}
+
+export const metadata = {
+  title: project.title,
+  description: project.description,
+}
+
+export default withProjectLayout(project)
+
+Pure Dominion needed a brand identity and product design for their luxury skincare direct to consumer brand and line of products.
+
+<Image src={imgPdShopCollection} alt="Pure Dominion Shop Collection Page" />
+<Image src={imgPdProduct} alt="Pure Dominion Product Detail Page" />

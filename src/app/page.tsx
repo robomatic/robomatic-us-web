@@ -1,21 +1,26 @@
-import Image from "next/image";
-import Link from "next/link";
-import clsx from "clsx";
+import Image from 'next/image'
+import Link from 'next/link'
+import clsx from 'clsx'
 
-import { Button } from "@/components/Button";
-import { Card } from "@/components/Card";
-import { Container } from "@/components/Container";
-import { GitHubIcon, InstagramIcon, LinkedInIcon, XIcon } from "@/components/SocialIcons";
-import { type ArticleWithSlug, getAllArticles } from "@/lib/articles";
-import { type ProjectWithSlug, getAllProjects } from "@/lib/projects";
-import { formatDate } from "@/lib/formatDate";
-import image1 from "@/images/photos/image-1.jpg";
-import image2 from "@/images/photos/image-2.jpg";
-import image3 from "@/images/photos/image-3.jpg";
-import image4 from "@/images/photos/image-4.jpg";
-import image5 from "@/images/photos/image-5.jpg";
+import { Button } from '@/components/Button'
+import { Card } from '@/components/Card'
+import { Container } from '@/components/Container'
+import {
+  GitHubIcon,
+  InstagramIcon,
+  LinkedInIcon,
+  XIcon,
+} from '@/components/SocialIcons'
+import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
+import { type ProjectWithSlug, getAllProjects } from '@/lib/projects'
+import { formatDate } from '@/lib/formatDate'
+import image1 from '@/images/photos/image-1.jpg'
+import image2 from '@/images/photos/image-2.jpg'
+import image3 from '@/images/photos/image-3.jpg'
+import image4 from '@/images/photos/image-4.jpg'
+import image5 from '@/images/photos/image-5.jpg'
 
-function BriefcaseIcon(props: React.ComponentPropsWithoutRef<"svg">) {
+function BriefcaseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -35,10 +40,10 @@ function BriefcaseIcon(props: React.ComponentPropsWithoutRef<"svg">) {
         className="stroke-zinc-400 dark:stroke-zinc-500"
       />
     </svg>
-  );
+  )
 }
 
-function ArrowDownIcon(props: React.ComponentPropsWithoutRef<"svg">) {
+function ArrowDownIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
       <path
@@ -48,38 +53,44 @@ function ArrowDownIcon(props: React.ComponentPropsWithoutRef<"svg">) {
         strokeLinejoin="round"
       />
     </svg>
-  );
+  )
 }
 
 function Article({ article }: { article: ArticleWithSlug }) {
   return (
     <Card as="article">
-      <Card.Title href={`/articles/${article.slug}`}>{article.title}</Card.Title>
+      <Card.Title href={`/articles/${article.slug}`}>
+        {article.title}
+      </Card.Title>
       <Card.Eyebrow as="time" dateTime={article.date} decorate>
         {formatDate(article.date)}
       </Card.Eyebrow>
       <Card.Description>{article.description}</Card.Description>
       <Card.Cta>Read article</Card.Cta>
     </Card>
-  );
+  )
 }
 
 function SocialLink({
   icon: Icon,
   ...props
 }: React.ComponentPropsWithoutRef<typeof Link> & {
-  icon: React.ComponentType<{ className?: string }>;
+  icon: React.ComponentType<{ className?: string }>
 }) {
   return (
     <Link className="group -m-1 p-1" {...props}>
       <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
     </Link>
-  );
+  )
 }
 
 function Project({ project }: { project: ProjectWithSlug }) {
   return (
-    <Button href={`/projects/${project.slug}`} variant="secondary" className="flex gap-4">
+    <Button
+      href={`/projects/${project.slug}`}
+      variant="secondary"
+      className="flex gap-4"
+    >
       <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
         <Image src={project.logo} alt="" className="h-auto w-7" unoptimized />
       </div>
@@ -89,16 +100,18 @@ function Project({ project }: { project: ProjectWithSlug }) {
           {project.title}
         </dd>
         <dt className="sr-only">Project</dt>
-        <dd className="text-xs text-zinc-500 dark:text-zinc-400">{project.company}</dd>
+        <dd className="text-xs text-zinc-500 dark:text-zinc-400">
+          {project.company}
+        </dd>
       </dl>
     </Button>
-  );
+  )
 }
 
 async function Projects() {
   const projects = (await getAllProjects())
     .slice(0, 4)
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 
   return (
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
@@ -111,16 +124,26 @@ async function Projects() {
           <Project key={projectIndex} project={project} />
         ))}
       </div>
-      <Button href="/projects" variant="secondary" className="group mt-6 w-full">
+      <Button
+        href="/projects"
+        variant="secondary"
+        className="group mt-6 w-full"
+      >
         See more
         <ArrowDownIcon className="h-4 w-4 -rotate-90 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
     </div>
-  );
+  )
 }
 
 function Photos() {
-  const rotations = ["rotate-2", "-rotate-2", "rotate-2", "rotate-2", "-rotate-2"];
+  const rotations = [
+    'rotate-2',
+    '-rotate-2',
+    'rotate-2',
+    'rotate-2',
+    '-rotate-2',
+  ]
 
   return (
     <div className="mt-16 sm:mt-20">
@@ -129,8 +152,8 @@ function Photos() {
           <div
             key={image.src}
             className={clsx(
-              "relative aspect-9/10 w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800",
-              rotations[imageIndex % rotations.length],
+              'relative aspect-9/10 w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800',
+              rotations[imageIndex % rotations.length]
             )}
           >
             <Image
@@ -143,11 +166,11 @@ function Photos() {
         ))}
       </div>
     </div>
-  );
+  )
 }
 
 export default async function Home() {
-  const articles = (await getAllArticles()).slice(0, 4);
+  const articles = (await getAllArticles()).slice(0, 4)
 
   return (
     <>
@@ -157,14 +180,18 @@ export default async function Home() {
             Shaping Digital Landscapes
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            Hi there! I&apos;m Rob, a software developer and product designer. I&apos;ve always been
-            fascinated by the way technology can transform lives and businesses and I&apos;m
-            passionate about using my skills to help others succeed in the digital world.
-            Ultimately, it brings me joy to provide great value to my clients when bringing new
-            products to life.
+            I&apos;m Rob Schuler, a product designer and software developer who
+            helps companies turn complex ideas into clear, durable web
+            applications. I work across strategy, interface design, and
+            front-end engineering so products feel thoughtful from the first
+            sketch to the shipped experience.
           </p>
           <div className="mt-6 flex gap-6">
-            <SocialLink href="https://x.com/FullyRobomatic" aria-label="Follow on X" icon={XIcon} />
+            <SocialLink
+              href="https://x.com/FullyRobomatic"
+              aria-label="Follow on X"
+              icon={XIcon}
+            />
             <SocialLink
               href="https://www.instagram.com/fullyrobomatic/"
               aria-label="Follow on Instagram"
@@ -197,5 +224,5 @@ export default async function Home() {
         </div>
       </Container>
     </>
-  );
+  )
 }
