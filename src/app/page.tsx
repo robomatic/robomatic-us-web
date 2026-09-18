@@ -1,19 +1,19 @@
-import Image from "next/image";
-import Link from "next/link";
-import clsx from "clsx";
+import clsx from "clsx"
+import Image from "next/image"
+import Link from "next/link"
 
-import { Button } from "@/components/Button";
-import { Card } from "@/components/Card";
-import { Container } from "@/components/Container";
-import { GitHubIcon, InstagramIcon, LinkedInIcon, XIcon } from "@/components/SocialIcons";
-import { type ArticleWithSlug, getAllArticles } from "@/lib/articles";
-import { type ProjectWithSlug, getAllProjects } from "@/lib/projects";
-import { formatDate } from "@/lib/formatDate";
-import image1 from "@/images/photos/image-1.jpg";
-import image2 from "@/images/photos/image-2.jpg";
-import image3 from "@/images/photos/image-3.jpg";
-import image4 from "@/images/photos/image-4.jpg";
-import image5 from "@/images/photos/image-5.jpg";
+import { Button } from "@/components/Button"
+import { Card } from "@/components/Card"
+import { Container } from "@/components/Container"
+import { GitHubIcon, InstagramIcon, LinkedInIcon, XIcon } from "@/components/SocialIcons"
+import image1 from "@/images/photos/image-1.jpg"
+import image2 from "@/images/photos/image-2.jpg"
+import image3 from "@/images/photos/image-3.jpg"
+import image4 from "@/images/photos/image-4.jpg"
+import image5 from "@/images/photos/image-5.jpg"
+import { type ArticleWithSlug, getAllArticles } from "@/lib/articles"
+import { formatDate } from "@/lib/formatDate"
+import { type ProjectWithSlug, getAllProjects } from "@/lib/projects"
 
 function BriefcaseIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
@@ -35,7 +35,7 @@ function BriefcaseIcon(props: React.ComponentPropsWithoutRef<"svg">) {
         className="stroke-zinc-400 dark:stroke-zinc-500"
       />
     </svg>
-  );
+  )
 }
 
 function ArrowDownIcon(props: React.ComponentPropsWithoutRef<"svg">) {
@@ -48,7 +48,7 @@ function ArrowDownIcon(props: React.ComponentPropsWithoutRef<"svg">) {
         strokeLinejoin="round"
       />
     </svg>
-  );
+  )
 }
 
 function Article({ article }: { article: ArticleWithSlug }) {
@@ -61,20 +61,20 @@ function Article({ article }: { article: ArticleWithSlug }) {
       <Card.Description>{article.description}</Card.Description>
       <Card.Cta>Read article</Card.Cta>
     </Card>
-  );
+  )
 }
 
 function SocialLink({
   icon: Icon,
   ...props
 }: React.ComponentPropsWithoutRef<typeof Link> & {
-  icon: React.ComponentType<{ className?: string }>;
+  icon: React.ComponentType<{ className?: string }>
 }) {
   return (
     <Link className="group -m-1 p-1" {...props}>
       <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
     </Link>
-  );
+  )
 }
 
 function Project({ project }: { project: ProjectWithSlug }) {
@@ -92,13 +92,13 @@ function Project({ project }: { project: ProjectWithSlug }) {
         <dd className="text-xs text-zinc-500 dark:text-zinc-400">{project.company}</dd>
       </dl>
     </Button>
-  );
+  )
 }
 
 async function Projects() {
   const projects = (await getAllProjects())
     .slice(0, 4)
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 
   return (
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
@@ -116,11 +116,11 @@ async function Projects() {
         <ArrowDownIcon className="h-4 w-4 -rotate-90 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
     </div>
-  );
+  )
 }
 
 function Photos() {
-  const rotations = ["rotate-2", "-rotate-2", "rotate-2", "rotate-2", "-rotate-2"];
+  const rotations = ["rotate-2", "-rotate-2", "rotate-2", "rotate-2", "-rotate-2"]
 
   return (
     <div className="mt-16 sm:mt-20">
@@ -143,11 +143,11 @@ function Photos() {
         ))}
       </div>
     </div>
-  );
+  )
 }
 
 export default async function Home() {
-  const articles = (await getAllArticles()).slice(0, 4);
+  const articles = (await getAllArticles()).slice(0, 4)
 
   return (
     <>
@@ -196,5 +196,5 @@ export default async function Home() {
         </div>
       </Container>
     </>
-  );
+  )
 }

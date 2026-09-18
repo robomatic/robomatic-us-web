@@ -1,9 +1,9 @@
-import { type Metadata } from "next";
-import Image from "next/image";
+import { type Metadata } from "next"
+import Image from "next/image"
 
-import { Card } from "@/components/Card";
-import { SimpleLayout } from "@/components/SimpleLayout";
-import { getAllProjects, ProjectWithSlug } from "@/lib/projects";
+import { Card } from "@/components/Card"
+import { SimpleLayout } from "@/components/SimpleLayout"
+import { getAllProjects, ProjectWithSlug } from "@/lib/projects"
 
 function EyeIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
@@ -13,19 +13,19 @@ function EyeIcon(props: React.ComponentPropsWithoutRef<"svg">) {
         fill="currentColor"
       />
     </svg>
-  );
+  )
 }
 
 export const metadata: Metadata = {
   title: "Projects",
   description: "Selected product design and web application projects.",
-};
+}
 
 async function Project({ project }: { project: ProjectWithSlug }) {
   return (
     <li key={project.title}>
       <Card>
-        <div className="h-44 w-full overflow-hidden rounded-xl shadow-md shadow-zinc-800/15 dark:bg-zinc-800 relative z-1 scale-100 bg-zinc-100/60 transition group-hover:scale-105">
+        <div className="relative z-1 h-44 w-full scale-100 overflow-hidden rounded-xl bg-zinc-100/60 shadow-md shadow-zinc-800/15 transition group-hover:scale-105 dark:bg-zinc-800">
           <Image
             src={project.image}
             alt=""
@@ -38,17 +38,17 @@ async function Project({ project }: { project: ProjectWithSlug }) {
           <Card.Link href={`/projects/${project.slug}`}>{project.title}</Card.Link>
         </h2>
         <Card.Description>{project.description}</Card.Description>
-        <p className="relative z-10 mt-6 flex gap-2 items-center text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
+        <p className="relative z-10 mt-6 flex items-center gap-2 text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
           <EyeIcon className="size-4 flex-none" />
           <span>View Project</span>
         </p>
       </Card>
     </li>
-  );
+  )
 }
 
 export default async function ProjectsPage() {
-  const projects = await getAllProjects();
+  const projects = await getAllProjects()
 
   return (
     <SimpleLayout
@@ -61,5 +61,5 @@ export default async function ProjectsPage() {
         ))}
       </ul>
     </SimpleLayout>
-  );
+  )
 }

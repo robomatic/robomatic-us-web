@@ -1,15 +1,16 @@
-import { Container } from "@/components/Container";
-import { Prose } from "@/components/Prose";
-import { type ProjectWithSlug } from "@/lib/projects";
-import { BackButton } from "./BackButton";
-import { AnimatedStatAndCircle } from "./AnimatedStatAndCircle";
+import { Container } from "@/components/Container"
+import { Prose } from "@/components/Prose"
+import { type ProjectWithSlug } from "@/lib/projects"
+
+import { AnimatedStatAndCircle } from "./AnimatedStatAndCircle"
+import { BackButton } from "./BackButton"
 
 export function ProjectLayout({
   project,
   children,
 }: {
-  project: ProjectWithSlug;
-  children?: React.ReactNode;
+  project: ProjectWithSlug
+  children?: React.ReactNode
 }) {
   return (
     <Container className="mt-16 lg:mt-32">
@@ -42,11 +43,11 @@ export function ProjectLayout({
         </div>
       </div>
     </Container>
-  );
+  )
 }
 
 export function withProjectLayout(project: ProjectWithSlug) {
   return function ProjectPage(props: { children?: React.ReactNode }) {
-    return <ProjectLayout project={project} {...props} />;
-  };
+    return <ProjectLayout project={project} {...props} />
+  }
 }

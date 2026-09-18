@@ -1,10 +1,10 @@
-import { type Metadata } from "next";
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from "@vercel/analytics/next"
+import { type Metadata } from "next"
 
-import { Providers } from "@/app/providers";
-import { Layout } from "@/components/Layout";
+import { Providers } from "@/app/providers"
+import { Layout } from "@/components/Layout"
 
-import "@/styles/tailwind.css";
+import "@/styles/tailwind.css"
 
 export const metadata: Metadata = {
   title: {
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     default: "Rob Schuler - Software developer and product designer.",
   },
   description: `Crafting world-class digital experiences with quality engineering and innovative design.`,
-};
+}
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -26,5 +26,5 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Analytics />
       </body>
     </html>
-  );
+  )
 }

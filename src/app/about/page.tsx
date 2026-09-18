@@ -1,11 +1,11 @@
-import { type Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
-import clsx from "clsx";
+import clsx from "clsx"
+import { type Metadata } from "next"
+import Image from "next/image"
+import Link from "next/link"
 
-import { Container } from "@/components/Container";
-import { GitHubIcon, InstagramIcon, LinkedInIcon, XIcon } from "@/components/SocialIcons";
-import portraitImage from "@/images/portrait.jpg";
+import { Container } from "@/components/Container"
+import { GitHubIcon, InstagramIcon, LinkedInIcon, XIcon } from "@/components/SocialIcons"
+import portraitImage from "@/images/portrait.jpg"
 
 function SocialLink({
   className,
@@ -13,10 +13,10 @@ function SocialLink({
   children,
   icon: Icon,
 }: {
-  className?: string;
-  href: string;
-  icon: React.ComponentType<{ className?: string }>;
-  children: React.ReactNode;
+  className?: string
+  href: string
+  icon: React.ComponentType<{ className?: string }>
+  children: React.ReactNode
 }) {
   return (
     <li className={clsx(className, "flex")}>
@@ -28,7 +28,7 @@ function SocialLink({
         <span className="ml-4">{children}</span>
       </Link>
     </li>
-  );
+  )
 }
 
 function MailIcon(props: React.ComponentPropsWithoutRef<"svg">) {
@@ -39,13 +39,13 @@ function MailIcon(props: React.ComponentPropsWithoutRef<"svg">) {
         d="M6 5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H6Zm.245 2.187a.75.75 0 0 0-.99 1.126l6.25 5.5a.75.75 0 0 0 .99 0l6.25-5.5a.75.75 0 0 0-.99-1.126L12 12.251 6.245 7.187Z"
       />
     </svg>
-  );
+  )
 }
 
 export const metadata: Metadata = {
   title: "About",
   description: "I'm Rob Schuler. Product designer and software developer based in Idaho.",
-};
+}
 
 export default function About() {
   return (
@@ -125,5 +125,5 @@ export default function About() {
         </div>
       </div>
     </Container>
-  );
+  )
 }

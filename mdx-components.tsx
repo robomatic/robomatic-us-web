@@ -1,12 +1,12 @@
-import Image, { type ImageProps } from "next/image";
-import type { MDXComponents } from "mdx/types";
+import type { MDXComponents } from "mdx/types"
+import Image, { type ImageProps } from "next/image"
 
 export function useMDXComponents(components: MDXComponents) {
   return {
     ...components,
     Image: (props: ImageProps) => {
-      const { alt, ...rest } = props;
-      return <Image alt={alt} {...rest} />;
+      const { alt, ...rest } = props
+      return <Image alt={alt} {...rest} />
     },
     FigureImage: ({ src, alt, caption }: { caption?: string } & ImageProps) => {
       return (
@@ -14,7 +14,7 @@ export function useMDXComponents(components: MDXComponents) {
           <Image src={src} alt={alt} />
           {caption && <figcaption>{caption}</figcaption>}
         </figure>
-      );
+      )
     },
-  };
+  }
 }

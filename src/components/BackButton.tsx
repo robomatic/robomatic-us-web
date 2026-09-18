@@ -1,8 +1,9 @@
-"use client";
+"use client"
 
-import { useContext } from "react";
-import { useRouter } from "next/navigation";
-import { AppContext } from "@/app/providers";
+import { useRouter } from "next/navigation"
+import { useContext } from "react"
+
+import { AppContext } from "@/app/providers"
 
 function ArrowLeftIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
@@ -14,15 +15,15 @@ function ArrowLeftIcon(props: React.ComponentPropsWithoutRef<"svg">) {
         strokeLinejoin="round"
       />
     </svg>
-  );
+  )
 }
 
 export function BackButton() {
-  const router = useRouter();
-  const { previousPathname } = useContext(AppContext);
+  const router = useRouter()
+  const { previousPathname } = useContext(AppContext)
 
   if (!previousPathname) {
-    return null;
+    return null
   }
 
   return (
@@ -34,5 +35,5 @@ export function BackButton() {
     >
       <ArrowLeftIcon className="h-4 w-4 stroke-zinc-500 transition group-hover:stroke-zinc-700 dark:stroke-zinc-500 dark:group-hover:stroke-zinc-400" />
     </button>
-  );
+  )
 }

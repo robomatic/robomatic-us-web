@@ -1,9 +1,9 @@
-import { type Metadata } from "next";
+import { type Metadata } from "next"
 
-import { Card } from "@/components/Card";
-import { SimpleLayout } from "@/components/SimpleLayout";
-import { type ArticleWithSlug, getAllArticles } from "@/lib/articles";
-import { formatDate } from "@/lib/formatDate";
+import { Card } from "@/components/Card"
+import { SimpleLayout } from "@/components/SimpleLayout"
+import { type ArticleWithSlug, getAllArticles } from "@/lib/articles"
+import { formatDate } from "@/lib/formatDate"
 
 function Article({ article }: { article: ArticleWithSlug }) {
   return (
@@ -20,16 +20,16 @@ function Article({ article }: { article: ArticleWithSlug }) {
         {formatDate(article.date)}
       </Card.Eyebrow>
     </article>
-  );
+  )
 }
 
 export const metadata: Metadata = {
   title: "Articles",
   description: "All of my long-form thoughts on specific projects.",
-};
+}
 
 export default async function ArticlesIndex() {
-  const articles = await getAllArticles();
+  const articles = await getAllArticles()
 
   return (
     <SimpleLayout
@@ -44,5 +44,5 @@ export default async function ArticlesIndex() {
         </div>
       </div>
     </SimpleLayout>
-  );
+  )
 }
