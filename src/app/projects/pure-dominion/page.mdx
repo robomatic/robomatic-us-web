@@ -3,6 +3,7 @@ import imgPdShopCollection from "./images/pure-dominion-shop-collection2.png"
 import imgPdProduct from "./images/pure-dominion-shop-product.png"
 import imgPdPreview from "./images/pure-dominion-preview.jpg"
 import logo from "./images/pure-dominion-logo-icon.svg"
+import LinkIcon from "@/components/LinkIcon"
 
 export const project = {
   date: "2026-09-17",
@@ -37,6 +38,11 @@ export const metadata = {
 export default withProjectLayout(project)
 
 Pure Dominion needed a brand identity and product design for their luxury skincare direct to consumer brand and line of products.
+
+<a href="https://puredominion.com" target="_blank" className="flex items-center gap-2">
+  <LinkIcon className="size-4" />
+  <span>Visit the Pure Dominion Skincare Storefront</span>
+</a>
 
 <Image src={imgPdShopCollection} alt="Pure Dominion Shop Collection Page" />
 <Image src={imgPdProduct} alt="Pure Dominion Product Detail Page" />
