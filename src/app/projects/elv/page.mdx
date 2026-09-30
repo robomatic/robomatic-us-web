@@ -1,0 +1,48 @@
+import { withProjectLayout } from "@/components/ProjectLayout"
+import imgExplore from "./images/elv-explore.png"
+import imgCountyView from "./images/elv-county-view.png"
+import imgStateView from "./images/elv-state-view.png"
+import imgDiagrams from "./images/elv-diagrams.png"
+import imgLogo from "./images/elv-logo-icon.svg"
+import imgHome from "./images/elv-home.png"
+import imgPreview from "./images/elv-preview.jpg"
+
+export const project = {
+  author: "Rob Schuler",
+  date: "2022-10-04",
+  title: "Every Legal Vote",
+  company: "ELV",
+  description: "Frontend development for a voter reporting website.",
+  stats: [
+    {
+      label: "Visual Design",
+      value: 50,
+    },
+    { label: "UX Design", value: 50 },
+    {
+      label: "Frontend Dev",
+      value: 100,
+    },
+    {
+      label: "Backend Dev",
+      value: 95,
+    },
+  ],
+  logo: imgLogo,
+  image: imgPreview,
+}
+
+export const metadata = {
+  title: project.title,
+  description: project.description,
+}
+
+export default withProjectLayout(project)
+
+Voting anomalies are a serious problem in the United States. Every Legal Vote is a website that helps people report them.
+
+<Image src={imgDiagrams} alt="Every Legal Vote Diagrams" />
+<Image src={imgHome} alt="Every Legal Vote Homepage" />
+<Image src={imgStateView} alt="Every Legal Vote State View" />
+<Image src={imgCountyView} alt="Every Legal Vote County View" />
+<Image src={imgExplore} alt="Every Legal Vote Explore View" />
